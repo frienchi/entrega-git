@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+/* elegi los colores basandome en esa imagen que consegui de inet */
+
+body{
+    background-image: url(assets/wallpa.jpg);
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    font-style: none;
+    text-decoration: none;
+    background-color: transparent;
+}
+.Nav-main{
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    color: violet;
+}
+header{
+    padding-top: 5%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+.photo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+p{
+    margin: 10px;
+    color: white;
+}
+.email{
+    text-align: center;
+}
+.links{
+    text-align: center;
+}
+.copy{
+    font-size: small;
+    text-align: right;
+}
+h1{
+    color: rgb(245, 195, 126);
+}
+h2{
+    color: rgb(245, 195, 126);
+}
+li{
+    list-style: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "grid-cont-l1 grid-cont-l2 grid-cont-l3 grid-cont-l4";
+    
+} 
+.grid-cont-l1{
+    grid-area: grid-cont-l1;
+    background-color: rgb(33, 243, 173);
+    border: 1px solid black;
+}
+.grid-cont-l2{
+    grid-area: grid-cont-l2;
+    background-color: rgb(211, 39, 39);
+    border: 1px solid black;
+}
+.grid-cont-l3{
+    grid-area: grid-cont-l3;
+    background-color: rgb(32, 149, 228);
+    border: 1px solid black;
+}
+.grid-cont-l4{
+    grid-area: grid-cont-l4;
+    background-color: rgb(126, 96, 155);
+    border: 1px solid black;
+}
+/* vista mobile */
+
+@media screen and (max-width: 320px){
+    .container{
+        display: grid;
+        /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
+        grid-template-columns: repeat(2, 50%);
+        /* Establecemos cantidad de filas y que alto tendran respecto al padre */
+        grid-template-rows: repeat(4, 200px);
+        /* Establecemos el espacio entre cajas */
+        /* gap: 1px; */
+        grid-template-areas: 
+        "grid-cont-l1 grid-cont-l1"
+        "grid-cont-l2 grid-cont-l2"
+        "grid-cont-l3 grid-cont-l3"
+        "grid-cont-l4 grid-cont-l4"
+        ;
+    }
+    .grid-cont-l1{
+        grid-area: grid-cont-l1;
+        background-color: rgb(33, 243, 173);
+    }
+    .grid-cont-l2{
+        grid-area: grid-cont-l2;
+        background-color: rgb(211, 39, 39);
+    }
+    .grid-cont-l3{
+        grid-area: grid-cont-l3;
+        background-color: rgb(32, 149, 228);
+    }
+    .grid-cont-l4{
+        grid-area: grid-cont-l4;
+        background-color: rgb(126, 96, 155);
+    }
+}
