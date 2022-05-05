@@ -1,0 +1,133 @@
+@import "partials/header";
+@import "partials/footer";
+@import "partials/body";
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/* elegi los colores basandome en esa imagen que consegui de inet */
+
+*{
+    margin: 0;
+    padding: 0;
+    font-style: none;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.Nav-main{
+    background-image: linear-gradient(black, purple);
+    display: flex;
+    justify-content: space-around;
+}
+nav a{
+    color: violet;
+}
+
+.photo{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+p{
+    margin: 10px;
+}
+.email{
+    text-align: center;
+}
+.links{
+    text-align: center;
+}
+.copy{
+    font-size: small;
+    text-align: right;
+}
+li{
+    list-style: none;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-areas: 
+    "grid-cont-l1 grid-cont-l2 grid-cont-l3 grid-cont-l4";
+    
+} 
+.grid-cont-l1{
+    grid-area: grid-cont-l1;
+    background-color: rgb(33, 243, 173);
+    border: 1px solid black;
+}
+.grid-cont-l2{
+    grid-area: grid-cont-l2;
+    background-color: rgb(211, 39, 39);
+    border: 1px solid black;
+}
+.grid-cont-l3{
+    grid-area: grid-cont-l3;
+    background-color: rgb(32, 149, 228);
+    border: 1px solid black;
+}
+.grid-cont-l4{
+    grid-area: grid-cont-l4;
+    background-color: rgb(126, 96, 155);
+    border: 1px solid black;
+}
+/* vista mobile */
+
+@media screen and (max-width: 320px){
+    .container{
+        display: grid;
+        /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
+        grid-template-columns: repeat(2, 50%);
+        /* Establecemos cantidad de filas y que alto tendran respecto al padre */
+        grid-template-rows: repeat(4, 200px);
+        /* Establecemos el espacio entre cajas */
+        /* gap: 1px; */
+        grid-template-areas: 
+        "grid-cont-l1 grid-cont-l1"
+        "grid-cont-l2 grid-cont-l2"
+        "grid-cont-l3 grid-cont-l3"
+        "grid-cont-l4 grid-cont-l4"
+        ;
+    }
+    .grid-cont-l1{
+        grid-area: grid-cont-l1;
+        background-color: rgb(33, 243, 173);
+    }
+    .grid-cont-l2{
+        grid-area: grid-cont-l2;
+        background-color: rgb(211, 39, 39);
+    }
+    .grid-cont-l3{
+        grid-area: grid-cont-l3;
+        background-color: rgb(32, 149, 228);
+    }
+    .grid-cont-l4{
+        grid-area: grid-cont-l4;
+        background-color: rgb(126, 96, 155);
+    }
+}
+.photo{
+    transform: scale(1,1);
+    transform: rotate(0deg);
+    animation-name: photo-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+@keyframes photo-animation {
+    0%{transform: scale(0.1,0.1);}
+    25%{transform: scale(1,1);}
+    51%{transform: scale(1,1);}
+    100%{transform: scale(0.1,0.1);}
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: transparent;
+    text-decoration: none;
+}
