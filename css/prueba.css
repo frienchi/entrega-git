@@ -1,5 +1,9 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 header {
+  font-family: verdana;
+  line-height: 2;
+  font-style: italic;
+  color: #fff;
   padding-top: 5%;
   padding-bottom: 5%;
   text-align: center; }
@@ -95,19 +99,25 @@ footer {
   background: #333; }
 
 body {
-  height: 100%;
+  font-family: Poppins;
+  line-height: 3;
+  font-style: none;
+  color: #080808;
+  background-color: #fff;
   width: 100%;
-  background: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%); }
+  height: 100%; }
 
 /* elegi los colores basandome en esa imagen que consegui de inet */
 * {
   margin: 0;
   padding: 0;
+  font-family: Poppins;
+  line-height: 3;
   font-style: none;
+  color: #080808;
   text-decoration: none;
   background-color: transparent;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif; }
+  box-sizing: border-box; }
 
 .Nav-main {
   background-image: linear-gradient(black, purple);
@@ -162,30 +172,6 @@ li {
   background-color: #7e609b;
   border: 1px solid black; }
 
-/* vista mobile */
-@media screen and (max-width: 320px) {
-  .container {
-    display: grid;
-    /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
-    grid-template-columns: repeat(2, 50%);
-    /* Establecemos cantidad de filas y que alto tendran respecto al padre */
-    grid-template-rows: repeat(4, 200px);
-    /* Establecemos el espacio entre cajas */
-    /* gap: 1px; */
-    grid-template-areas: "grid-cont-l1 grid-cont-l1" "grid-cont-l2 grid-cont-l2" "grid-cont-l3 grid-cont-l3" "grid-cont-l4 grid-cont-l4"; }
-  .grid-cont-l1 {
-    grid-area: grid-cont-l1;
-    background-color: #21f3ad; }
-  .grid-cont-l2 {
-    grid-area: grid-cont-l2;
-    background-color: #d32727; }
-  .grid-cont-l3 {
-    grid-area: grid-cont-l3;
-    background-color: #2095e4; }
-  .grid-cont-l4 {
-    grid-area: grid-cont-l4;
-    background-color: #7e609b; } }
-
 .photo {
   transform: scale(1, 1);
   transform: rotate(0deg);
@@ -212,3 +198,26 @@ a {
 a:hover {
   color: transparent;
   text-decoration: none; }
+
+@media only screen and (max-width: 320px) {
+  .container {
+    display: grid;
+    /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
+    grid-template-columns: repeat(2, 50%);
+    /* Establecemos cantidad de filas y que alto tendran respecto al padre */
+    grid-template-rows: repeat(4, 200px);
+    /* Establecemos el espacio entre cajas */
+    /* gap: 1px; */
+    grid-template-areas: "grid-cont-l1 grid-cont-l1" "grid-cont-l2 grid-cont-l2" "grid-cont-l3 grid-cont-l3" "grid-cont-l4 grid-cont-l4"; }
+  .grid-cont-l1 {
+    grid-area: grid-cont-l1;
+    background-color: #21f3ad; }
+  .grid-cont-l2 {
+    grid-area: grid-cont-l2;
+    background-color: #d32727; }
+  .grid-cont-l3 {
+    grid-area: grid-cont-l3;
+    background-color: #2095e4; }
+  .grid-cont-l4 {
+    grid-area: grid-cont-l4;
+    background-color: #7e609b; } }

@@ -1,18 +1,21 @@
 @import "partials/header";
 @import "partials/footer";
 @import "partials/body";
-
+@import "sass2/condicionales";
+@import "sass2/maps";
+@import "sass2/mixins";
 @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+@import "variables/variables";
+
 /* elegi los colores basandome en esa imagen que consegui de inet */
 
 *{
     margin: 0;
     padding: 0;
-    font-style: none;
+    @include fuentes;
     text-decoration: none;
     background-color: transparent;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
 }
 .Nav-main{
     background-image: linear-gradient(black, purple);
@@ -71,9 +74,34 @@ li{
     background-color: rgb(126, 96, 155);
     border: 1px solid black;
 }
-/* vista mobile */
 
-@media screen and (max-width: 320px){
+.photo{
+    transform: scale(1,1);
+    transform: rotate(0deg);
+    animation-name: photo-animation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in;
+    animation-duration: 4s;
+    animation-delay: 0s;
+}
+
+@keyframes photo-animation {
+    0%{transform: scale(0.1,0.1);}
+    25%{transform: scale(1,1);}
+    51%{transform: scale(1,1);}
+    100%{transform: scale(0.1,0.1);}
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    color: transparent;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 320px) {
     .container{
         display: grid;
         /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
@@ -105,29 +133,4 @@ li{
         grid-area: grid-cont-l4;
         background-color: rgb(126, 96, 155);
     }
-}
-.photo{
-    transform: scale(1,1);
-    transform: rotate(0deg);
-    animation-name: photo-animation;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in;
-    animation-duration: 4s;
-    animation-delay: 0s;
-}
-
-@keyframes photo-animation {
-    0%{transform: scale(0.1,0.1);}
-    25%{transform: scale(1,1);}
-    51%{transform: scale(1,1);}
-    100%{transform: scale(0.1,0.1);}
-}
-
-a {
-    color: black;
-    text-decoration: none;
-}
-a:hover {
-    color: transparent;
-    text-decoration: none;
 }

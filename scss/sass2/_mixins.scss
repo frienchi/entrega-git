@@ -1,0 +1,14 @@
+@import "../variables/variables";
+@mixin fuentes {
+    font-family: $tipo-de-letra;
+    line-height: 3;
+    font-style: none;
+    color: $black;
+}
+
+@mixin fuentes2 {
+    font-family: $tipo-de-letra2;
+    line-height: 2;
+    font-style: italic;
+    color: $blanco;
+}

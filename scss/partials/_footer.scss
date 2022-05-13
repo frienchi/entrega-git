@@ -1,7 +1,11 @@
+@import "../variables/variables";
+@import "sass2/mixins";
+
 footer{
     display: grid;
     place-items: center;
 }
+
 .icons_container {
     display: inline-flex;
 }
@@ -38,8 +42,8 @@ footer{
     position: absolute;
     top: 0;
     z-index: 1;
-    background: #fff;
-    color: #fff;
+    background: $blanco;
+    color: $blanco;
     padding: 10px 18px;
     font-size: 16px;
     font-weight: 500;
@@ -61,7 +65,7 @@ footer{
     content: "";
     height: 15px;
     width: 15px;
-    background: #fff;
+    background: $blanco;
     left: 50%;
     bottom: -6px;
     transform: translateX(-50%) rotate(45deg);
@@ -69,7 +73,7 @@ footer{
 }
 
 .icons_container .icon:hover span {
-    color: #fff;
+    color: $blanco;
 }
 
 .icons_container .icon:hover span,

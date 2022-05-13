@@ -1,0 +1,17 @@
+@import "../sass2/mixins";
+@import "../variables/variables";
+
+$font:(
+    color: $blanco,
+    alto: $alto,
+    ancho: $ancho,
+    fSize: $size,
+    );
+    
+
+body{
+    @include fuentes;
+    background-color: map-get($font, color);
+    width: map-get($font, alto);
+    height: map-get($font, ancho);
+}
