@@ -7,8 +7,9 @@
 }
 
 @mixin fuentes2 {
+    text-decoration: none;
     font-family: $tipo-de-letra2;
-    line-height: 2;
+    line-height: 1;
     font-style: italic;
     color: $blanco;
 }

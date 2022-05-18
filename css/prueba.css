@@ -1,16 +1,17 @@
 @import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
 header {
+  text-decoration: none;
   font-family: verdana;
-  line-height: 2;
+  line-height: 1;
   font-style: italic;
   color: #fff;
   padding-top: 5%;
-  padding-bottom: 5%;
   text-align: center; }
 
 footer {
   display: grid;
-  place-items: center; }
+  place-items: center;
+  padding-top: 4%; }
 
 .icons_container {
   display: inline-flex; }
@@ -99,6 +100,9 @@ footer {
   background: #333; }
 
 body {
+  background-image: url(/assets/polygon-scatter-haikei.svg); }
+
+body {
   font-family: Poppins;
   line-height: 3;
   font-style: none;
@@ -120,7 +124,6 @@ body {
   box-sizing: border-box; }
 
 .Nav-main {
-  background-image: linear-gradient(black, purple);
   display: flex;
   justify-content: space-around; }
 
@@ -146,31 +149,6 @@ p {
 
 li {
   list-style: none; }
-
-.container {
-  display: grid;
-  grid-template-columns: repeat(4, 25%);
-  grid-template-areas: "grid-cont-l1 grid-cont-l2 grid-cont-l3 grid-cont-l4"; }
-
-.grid-cont-l1 {
-  grid-area: grid-cont-l1;
-  background-color: #21f3ad;
-  border: 1px solid black; }
-
-.grid-cont-l2 {
-  grid-area: grid-cont-l2;
-  background-color: #d32727;
-  border: 1px solid black; }
-
-.grid-cont-l3 {
-  grid-area: grid-cont-l3;
-  background-color: #2095e4;
-  border: 1px solid black; }
-
-.grid-cont-l4 {
-  grid-area: grid-cont-l4;
-  background-color: #7e609b;
-  border: 1px solid black; }
 
 .photo {
   transform: scale(1, 1);
@@ -198,26 +176,3 @@ a {
 a:hover {
   color: transparent;
   text-decoration: none; }
-
-@media only screen and (max-width: 320px) {
-  .container {
-    display: grid;
-    /*Establecemos cuantas columnas filas y que anchos tendran respecto al padre*/
-    grid-template-columns: repeat(2, 50%);
-    /* Establecemos cantidad de filas y que alto tendran respecto al padre */
-    grid-template-rows: repeat(4, 200px);
-    /* Establecemos el espacio entre cajas */
-    /* gap: 1px; */
-    grid-template-areas: "grid-cont-l1 grid-cont-l1" "grid-cont-l2 grid-cont-l2" "grid-cont-l3 grid-cont-l3" "grid-cont-l4 grid-cont-l4"; }
-  .grid-cont-l1 {
-    grid-area: grid-cont-l1;
-    background-color: #21f3ad; }
-  .grid-cont-l2 {
-    grid-area: grid-cont-l2;
-    background-color: #d32727; }
-  .grid-cont-l3 {
-    grid-area: grid-cont-l3;
-    background-color: #2095e4; }
-  .grid-cont-l4 {
-    grid-area: grid-cont-l4;
-    background-color: #7e609b; } }
